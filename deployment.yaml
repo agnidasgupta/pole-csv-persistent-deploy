@@ -1,0 +1,24 @@
+enabled: true
+image: YOUR_DOCKERHUB_USERNAME/pole-csv-persistent:latest
+port: 8000
+resources:
+  replicas: 1
+  instanceType: GPU_INSTANCE_TYPE
+healthChecks:
+  startup:
+    path: /health
+    port: 8000
+    periodSeconds: 10
+    failureThreshold: 18
+  readiness:
+    path: /health
+    port: 8000
+    initialDelaySeconds: 5
+    periodSeconds: 10
+    timeoutSeconds: 5
+  liveness:
+    path: /health
+    port: 8000
+    initialDelaySeconds: 15
+    periodSeconds: 10
+    timeoutSeconds: 5
