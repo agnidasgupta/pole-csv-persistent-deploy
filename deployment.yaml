@@ -1,5 +1,5 @@
 enabled: true
-image: YOUR_DOCKERHUB_USERNAME/pole-csv-persistent:latest
+image: agnijit/pole-csv-persistent:latest
 port: 8000
 resources:
   replicas: 1
