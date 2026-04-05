@@ -31,7 +31,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: agnidasgupta/pole-csv-persistent
+          images: agnijit/pole-csv-persistent
           tags: |
             type=raw,value=latest
             type=sha
